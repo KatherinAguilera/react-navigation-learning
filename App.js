@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   createStackNavigator,
   createAppContainer
@@ -7,6 +8,8 @@ import Home from'./src/screens/home';
 import Login from'./src/screens/login';
 import About from'./src/screens/about';
 import Profile from'./src/screens/profile';
+import { Text } from 'react-native';
+import { blue } from 'ansi-colors';
 
 //rutas y configuracion
 // Home:Home,
@@ -29,9 +32,16 @@ const AppNavigator = createStackNavigator(
   },
   {
     // donde inicia la app
-    initialRouteName: 'About',
+    initialRouteName: 'Login',
     defaultNavigationOptions: {
-      title: 'Un titulo genérico'
+      title: 'Un titulo genérico',
+      headerTitleAllowFontScaling: true,
+      headerBackTitle: 'Atras',
+      gesturesEnabled: true,
+      headerTintColor: 'peru',
+      headerBackImage: <Text>{`<=`}</Text>,
+      // headerBackground: 'black',
+      // header: <Text style={{color: 'white'}}>esto es un header</Text>,
     },
     initialRouteKey: 'login',
     initialRouteParams: {
