@@ -37,6 +37,7 @@ const AppNavigator = createStackNavigator(
       title: 'Un titulo genérico',
       headerTitleAllowFontScaling: true,
       headerBackTitle: 'Atras',
+      //ir hacia atras
       gesturesEnabled: true,
       headerTintColor: 'peru',
       headerBackImage: <Text>{`<=`}</Text>,
@@ -46,7 +47,17 @@ const AppNavigator = createStackNavigator(
     initialRouteKey: 'login',
     initialRouteParams: {
       nombre: 'Leonidas Esteban'
-    }
+    },
+    // headerMode: float screen none
+    // headerMode: 'screen',
+    // mode: modal card
+    mode: 'card',
+    cardStyle: {
+      borderWidth: 2,
+      backgroundColor: 'red'
+    },
+    // headerTransitionPreset: 'fade-in-place' 'uikit'
+    headerTransitionPreset: 'uikit',
   }
 );
 const AppContainer = createAppContainer(AppNavigator);
