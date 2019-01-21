@@ -1,10 +1,13 @@
 import React, {Component } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
-// funcion para onPress
+import { StackActions } from 'react-navigation';
 
 class Home extends Component {
+  // funcion para onPress
   handlePress = () => {
-    this.props.navigation.navigate('Login')
+    this.props.navigation.dispatch(StackActions.push({
+      routeName: 'Login',
+    }))
   }
   render() {
     return (

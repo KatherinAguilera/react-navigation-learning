@@ -1,10 +1,16 @@
 import React, {Component } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
-
+import { NavigationActions } from 'react-navigation';
 
 class Login extends Component {
   handlePress = () => {
-    this.props.navigation.navigate('About')
+      // console.log(this.props.navigation);
+    // this.props.navigation.navigate('About')
+    this.props.navigation.dispatch(
+      NavigationActions.navigate({
+        routeName: 'About',
+      })
+    )
   }
   render() {
     return (

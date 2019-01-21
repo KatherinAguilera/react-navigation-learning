@@ -8,12 +8,15 @@ import {
 import Name from '../profile/components/name';
 
 class Profile extends Component {
-  handlePress = () => {
-    // enviar a profile
-    this.props.navigation.navigate('Profile', {
-      name: 'LeonidasEsteban'
-    })
-  }
+
+    handlePress = () => {
+      this.props.navigation.navigate('Home')
+    }
+  //   // enviar a profile
+  //   this.props.navigation.navigate('Profile', {
+  //     name: 'LeonidasEsteban'
+  //   })
+  // }
   // nombre header en perfil
   static navigationOptions = ({ navigation }) => {
     return {
