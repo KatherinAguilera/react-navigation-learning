@@ -46,7 +46,7 @@ const AppNavigator = createStackNavigator(
     },
     initialRouteKey: 'login',
     initialRouteParams: {
-      nombre: 'Leonidas Esteban'
+      name: 'Leonidas Esteban'
     },
     // headerMode: float screen none
     // headerMode: 'screen',
@@ -62,6 +62,21 @@ const AppNavigator = createStackNavigator(
 );
 const AppContainer = createAppContainer(AppNavigator);
 
-export default AppContainer;
+const Main = createStackNavigator(
+  {
+    Main: {
+      screen: AppContainer
+    },
+    Login: {
+      screen: Login,
+    }
+  },
+  {
+    mode: 'modal',
+    headerMode: 'none',
+  }
+)
+// export default Main;
 
 // export default createAppContainer(AppNavigator);
+export default createAppContainer(Main);
